@@ -1,0 +1,348 @@
+$secondary: #0B181E;
+$white: #FFFFFF;
+
+
+// %bouton{
+//     border-radius: 0;
+//     color: yellow;
+// }
+// $body-bg: black;
+
+// // ----- POLICES -----
+
+// PLAYFAIR DISPLAY
+// font-family: 'Playfair Display', serif;
+
+// RALEWAY
+// font-family: 'Raleway', sans-serif;
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(../assets/typo/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url(../assets/typo/Raleway-Regular.ttf);
+}
+$primary:       #0B181E;
+$secondary:     #F9B860 ;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+) ;
+$btn-border-radius: 0;
+
+$font-family-base :'Raleway';
+$font-family-title : 'Playfair Display';
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap");
+
+@import "../bootstrap/scss/bootstrap.scss";
+
+@mixin dflex($direction: row, $justify: space-between, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  align-content: center;
+}
+
+h1, h2, h3,h4,h5{
+    font-family: $font-family-title;
+}
+
+.navbar {
+  background-color: #0B181E;
+  height: 7em;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.title-brand {
+  color: white;
+
+//   @include m.setfontfamilyplayfairdisplay("PlayFairRegular");
+}
+
+.nav-link {
+  color: white ;
+}
+
+#head-container {
+  background-image: url(../img/hero-wrapper.png);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+
+  .headsection {
+    @include dflex($justify: center);
+    margin: auto 0;
+    height: 100vh;
+  }
+  .herotext {
+    @include dflex(column, $justify: space-between, $align: left);
+    color: white;
+    h1 {
+      font-size: 50px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+.history-section{
+    &__left{
+        width: 70vh;
+        &__titleHistory{
+            color: white;
+            font-size: 3em;
+          }
+        &__paragraphe{
+                color: white;
+            }  
+        &__button{
+            color: #F9B860;
+            background: none;
+        }
+    }
+}
+.container-fluid{
+    --bss-gutter-x:0;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    font-family: "playfair display";
+}
+
+// Section feuilles
+.leaves{
+    background: url(../img/Rectangle_15.svg);
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: $white;
+    align-items: center;
+}
+
+.leaves__title{
+    margin-bottom: 64px;
+}
+
+.leaves__button{
+    background-color: #F9B860;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    width: fit-content;
+    border-radius: 0%;
+}
+
+// Formulaire
+.contact{
+    padding-top: 10vh;
+    width: 80vw;
+    background-color: $primary;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    padding-bottom: 10vh;
+}
+
+.form_head_text{
+    background-color: $primary;
+    text-align: center;
+}
+
+.contact_text_contact{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.contact_text_phone{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 34px;
+    margin-bottom: 34px;
+}
+
+.contact_text_adress{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.form{
+    width: 50vw;
+    margin-top: 62px;
+    background-color: $primary;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input_out{
+    background-color: $primary;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: $primary;
+    border-radius: 0%;
+    border-color: $white;
+    color: $white;
+    padding: 1.5rem;
+}
+
+.form-control::placeholder{
+    color: $white;
+}
+
+.submit__form{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 0%;
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    width: fit-content;
+}
+
+// Footer
+.footer{
+    margin: 0;
+    padding: 0;
+}
+
+.footer__text{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.footer__logo{
+    scale: 60%;
+}
+.contact{
+    width: 70vw;
+    background-color: #0B181E;
+    padding-top: 10vh;
+}
+  #whattoexpect{
+    display: flex;
+    align-items: center;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+  #whattoexpect img{
+    width: auto;
+    height: auto;
+  }
+  #whattoexpect p{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .what_to_expect_col_text{
+    align-items: center;
+  }
+  .what_to_expect_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+  }
+  .what_to_expect_button_button{
+    font-family: "raleway";
+    font-size: 15px;
+    font-weight: 300;
+    color: #F9B860;
+    background-color: rgba(0, 0, 0, 1);
+    border-color:  #F9B860;
+  }
+  #gallery img{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5em;
+    padding-bottom: 0.3em;
+  }
+
+  .carousel-item img{
+    margin-bottom: 5em;
+  }
+  .gallery_title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.5em;
+    font-family: 'Playfair Display';
+        font-size: 22px;
+        font-weight: 400;
+  }
+  .carousel-inner{
+    display: flex;
+    text-align: center;
+
+  }
+.what_to_expect{
+    background-image: url("../img/Rectangle\ 1.svg");
+    background-position: center;
+    background-size: cover;
+    padding: 5%;
+    text-align: center;
+    &__h2{
+        font-family: 'Playfair Display';
+        font-size: 40px;
+        font-weight: 400;
+    }
+    &__h3{
+        font-family: 'Playfair Display';
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+.carousel{
+    background: #0B181E;
+    height: 25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__testimony{
+        font-family: 'raleway';
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 2em;
+    }
+    &__name{
+        font-family: 'Playfair Display';
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+.carousel-control-prev{
+    padding-right: 5em;
+}
+.carousel-control-next{
+    padding-left: 5em;
+}
